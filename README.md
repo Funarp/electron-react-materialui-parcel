@@ -5,7 +5,7 @@ A minimal Electron + React.js + material-UI boilerplate with [parcel as bundler]
 ## Installation
 
 * `git clone https://github.com/Funarp/electron-react-materialui-parcel`
-* `cd Electron-React-MaterialUI-Parcel`
+* `cd electron-react-materialui-parcel`
 * `yarn install`
 
 ## Usage
