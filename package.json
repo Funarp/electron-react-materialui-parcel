@@ -1,0 +1,76 @@
+{
+  "name": "electron-react-materialui-parcel",
+  "version": "0.1.2",
+  "description": "Boilerplate using material-UI parcel as bundler for Electron apps.",
+  "main": "main.js",
+  "scripts": {
+    "dev": "concurrently --kill-others --success first \"npm run parcel-dev\" \"npm run electron-dev\"",
+    "parcel-dev": "parcel ./src/public/index.html -d build/",
+    "electron-dev": "electron . --start-dev",
+    "start": "electron .",
+    "parcel-build": "rm -rf build/ && parcel build ./src/public/index.html -d build/ --public-url ./ && cp assets/icon.ico build/icon.ico",
+    "parcel-build-extra-assets": "parcel build ./src/extra_assets/* -d build/",
+    "electron-pack": "electron-builder --dir",
+    "electron-dist": "electron-builder",
+    "electron-postinstall": "electron-builder install-app-deps",
+    "dist": "npm run parcel-build && npm run parcel-build-extra-assets && npm run electron-dist && npm run electron-postinstall"
+  },
+  "author": "Funarp mr.function.sharp@gmail.com",
+  "build": {
+    "appId": "com.some.electron.quickstart",
+    "dmg": {
+      "contents": [
+        {
+          "x": 110,
+          "y": 150
+        },
+        {
+          "x": 240,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "linux": {
+      "category": "Utility",
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "icon": "build/icon.png"
+    },
+    "win": {
+      "target": "msi",
+      "icon": "build/icon.png"
+    },
+    "files": [
+      "main.js",
+      "build/*"
+    ]
+  },
+  "keywords": [
+    "parcel",
+    "react",
+    "material-ui"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@fontsource/roboto": "^4.2.1",
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "styled-components": "^5.2.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/preset-react": "^7.12.1",
+    "concurrently": "^5.3.0",
+    "electron": "^10.1.5",
+    "electron-builder": "^22.9.1",
+    "electron-reload": "^1.5.0",
+    "parcel-bundler": "^1.12.4"
+  }
+}
