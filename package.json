@@ -16,6 +16,7 @@
     "dist": "npm run parcel-build && npm run parcel-build-extra-assets && npm run electron-dist && npm run electron-postinstall"
   },
   "author": "Funarp mr.function.sharp@gmail.com",
+  "homepage": "https://github.com/Funarp/electron-react-materialui-parcel",
   "build": {
     "appId": "com.some.electron.quickstart",
     "dmg": {
