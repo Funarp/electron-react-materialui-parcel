@@ -1,12 +1,12 @@
-# electron-react-parcel
+# electron-react-materialui-parcel
 
-A minimal Electron + React.js boilerplate with [parcel as bundler](https://github.com/parcel-bundler/parcel). Parcel is an alternative web application bundler to Webpack.
+A minimal Electron + React.js + material-UI boilerplate with [parcel as bundler](https://github.com/parcel-bundler/parcel). Parcel is an alternative web application bundler to Webpack.
 
 ## Installation
 
-* `git@gitlab.com:aimeri/electron-react-parcel.git`
-* `cd electron-react-parcel`
-* `npm install`
+* `https://github.com/Funarp/Electron-React-MaterialUI-Parcel`
+* `cd Electron-React-MaterialUI-Parcel`
+* `yarn install`
 
 ## Usage
 
@@ -14,18 +14,18 @@ A minimal Electron + React.js boilerplate with [parcel as bundler](https://githu
 Run these commands to start dev server and Electron app
 ``` bash
 # Parcel bundles the code and runs dev server
-$ npm run dev
+$ yarn dev
 
 # Run the electron app which uses local dev server
-$ npm run start-dev
+$ yarn start-dev
 ```
 
 ### Production mode and packaging app
 Run this command to bundle code in production mode
 ``` bash
 # Parcel bundle code once
-$ npm run build
+$ yarn build
 
 # Create executables
-$ npm run dist
+$ yarn dist
 ```

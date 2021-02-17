@@ -1,6 +1,6 @@
 {
   "name": "electron-react-materialui-parcel",
-  "version": "0.1.2",
+  "version": "0.1.0",
   "description": "Boilerplate using material-UI parcel as bundler for Electron apps.",
   "main": "main.js",
   "scripts": {
@@ -68,7 +68,7 @@
     "@babel/preset-env": "^7.12.1",
     "@babel/preset-react": "^7.12.1",
     "concurrently": "^5.3.0",
-    "electron": "^10.1.5",
+    "electron": "^11.2.3",
     "electron-builder": "^22.9.1",
     "electron-reload": "^1.5.0",
     "parcel-bundler": "^1.12.4"

@@ -16,7 +16,22 @@ let mainWindow
 
 app.on('ready', () => {
 
-    let mainWindow = new BrowserWindow({width: 1024, height: 768})
+    let mainWindow = new BrowserWindow({
+        width: 1024, 
+        height: 768,
+        webPreferences: {
+            // Uncomment following when you need IPC
+            // nodeIntegration: true,
+            // contextIsolation: false,
+            // enableRemoteModule: true
+        }
+    })
+
+    // Uncomment for removing Menu bar
+    // mainWindow.removeMenu()
+    
+    // Enable DevTools
+    mainWindow.webContents.openDevTools()
 
     const startUrl = serve ? "http://localhost:1234" : url.format({
           pathname: path.join(__dirname, './build/index.html'),
