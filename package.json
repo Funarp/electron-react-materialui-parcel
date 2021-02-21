@@ -8,7 +8,7 @@
     "parcel-dev": "parcel ./src/public/index.html -d build/",
     "electron-dev": "electron . --start-dev",
     "start": "electron .",
-    "parcel-build": "rm -rf build/ && parcel build ./src/public/index.html -d build/ --public-url ./ && cp assets/icon.ico build/icon.ico",
+    "parcel-build": "rm -rf build/ && parcel build ./src/public/index.html -d build/ --public-url ./ --no-source-maps && cp assets/icon.ico build/icon.ico",
     "parcel-build-extra-assets": "parcel build ./src/extra_assets/* -d build/",
     "electron-pack": "electron-builder --dir",
     "electron-dist": "electron-builder",
